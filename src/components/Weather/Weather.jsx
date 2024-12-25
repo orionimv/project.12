@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import WeatherContainer from "../WeatherContainer"
+import WeatherContainer from "../WeatherContainer/index.js"
 
 const Weather = ({weather, timeFrame}) =>{
     if (!weather) {

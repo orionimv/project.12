@@ -1,4 +1,4 @@
-import WeatherContainer from "../WeatherContainer"
+import WeatherContainer from "../WeatherContainer/index.js"
 import PropTypes from "prop-types";
 
 const CurrentWeather = ({weather}) => {
