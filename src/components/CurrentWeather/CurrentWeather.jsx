@@ -1,26 +1,26 @@
-import WeatherContainer from "../WeatherContainer/index.js"
+import WeatherContainer from "../WeatherContainer";
 import PropTypes from "prop-types";
 
 const CurrentWeather = ({weather}) => {
 
     if (!weather) {
-        return <div>Loading..</div>
+        return <div>Loading...</div>;
     }
 
     return (
         <WeatherContainer country={weather.location.country}
-                          temp = {weather.current.temp_c}
-                          src = {weather.current.conditions.icon}
-                          city = {weather.location.name}
-                          currentWeather = {true}
-                          time = {weather.current.last_update.slice(-5)}
-                          condition = {weather.current.condition.text}
-    />
+                          temp={weather.current.temp_c}
+                          src={weather.current.condition.icon}
+                          city={weather.location.name}
+                          currentWeather={true}
+                          time={weather.current.last_updated.slice(-5)}
+                          condition={weather.current.condition.text}
+        />
     )
 }
 
-CurrentWeather.prototype = {
-    weather: PropTypes.object.isRequired
+CurrentWeather.propTypes = {
+    weather: PropTypes.object.isRequired,
 }
 
-export default CurrentWeather
+export default CurrentWeather;
