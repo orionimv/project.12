@@ -1,3 +1,1 @@
-import TimeFilter from "./TimeFilter.jsx"
-
-export default TimeFilter;
+export { default } from './TimeFilter';

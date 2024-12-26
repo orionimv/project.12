@@ -29,7 +29,7 @@ const Search = ({onClick}) => {
                 <Form.Control
                     style={searchStyle}
                     onChange={handleChange}
-                    value={regio}
+                    value={region}
                 />
             </InputGroup>
         </Form>

@@ -3,8 +3,8 @@ import InputGroup from "react-bootstrap/InputGroup";
 import {Button} from "react-bootstrap";
 import {Fragment, useState} from "react";
 import PropTypes from "prop-types"
-import {DataPicker} from 'rsuite'
-import {loadConfigFromFile} from "vite";
+import {DatePicker} from 'rsuite'
+// import {loadConfigFromFile} from "vite";
 
 const TimeFilter = ({onTimeFrame}) => {
     const [from, setFrom] = useState(null)
@@ -33,12 +33,14 @@ const TimeFilter = ({onTimeFrame}) => {
     return(
         <Fragment>
             <Form onSubmit={handleSubmit}>
-                <InputGroup className={mb-3}>
+                {/* what is mb-3 ? */}
+                {/*<InputGroup className={mb-3}>*/}
+                <InputGroup>
                     <Button className="my-custom-button" type={'submit'}>
                         Apply Time Frame
                     </Button>
 
-                    <DataPicker
+                    <DatePicker
                         className={'my-custom-time-picker right'}
                         format="HH"
                         value={to}
@@ -49,3 +51,5 @@ const TimeFilter = ({onTimeFrame}) => {
         </Fragment>
     )
 }
+
+export default TimeFilter;
